@@ -23,3 +23,8 @@ You'll also want the SPIFFS data uploader, so that once you have a library of im
 write them into the module.  
 See the instructions here: https://github.com/esp8266/arduino-esp8266fs-plugin
    
+If you'd like to do something else to produce raw images, note that they're written directly to the screen as a
+stack (two deep) of 1-bit rasters, black first, for the same number of bits as there are pixels on the display,
+and then red -- or possibly yellow, depending on your epaper module.  The image file should be twice the size in 
+bits as the resolution of the display.  There is no other data in the file.  
+
