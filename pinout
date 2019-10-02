@@ -1,0 +1,17 @@
+
+Display:
+
+           3v    GND          D/C             SDI                 CS              CLK          BUSY
+
+           V      V            V               V                   V               V            V
+		
+Linknode:  3v    GND      GPIO0/D8    D12/MISO/GPIO13/RX   D10/SS/GPIO15/TX  D13/SCK/GPIO14    N/C
+NodeMCU:   3v    GND      GPIO12/D4           D7/D               D8/CS          D5/SCK         N/C
+
+
+For linknode, #define CS_PIN	0
+For NodeMCU, #define CS_PIN	D4
+
+... in epdif.h
+
+
